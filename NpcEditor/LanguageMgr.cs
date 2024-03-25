@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NpcEditor
 {
@@ -28,7 +23,7 @@ namespace NpcEditor
             {
                 //log.Error("Parameters number error, ID: " + name + " (Arg count=" + args.Length + ")", exception);
             }
-            
+
             if (string.IsNullOrEmpty(text))
                 text = name;
 
