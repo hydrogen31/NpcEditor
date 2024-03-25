@@ -18,6 +18,7 @@ Kullanım videosu
 - Resource üzerinden NPC swf'si otomatik tespit edilerek yüklenir.
 - NPC animasyonlarını listelenebilir.
 - NPC animasyonu oynatılabilir.
+- Çoklu seçim özelliğini açarak aynı ModelID'ye sahip NPC'lerin hitboxunu toplu değiştirebilirsiniz. 
 - NPC hitboxunu görüntüleyebilir ve düzenleme yapabilirsiniz.
 
 
@@ -47,6 +48,7 @@ NPC'yi yeni seçtiğinizde db'deki mevcut hitboxlar gözükür. Fare ile animasy
 
 NPC'nin animasyonunun merkez noktasına bir nokta işaretledim. Bu nokta size bazen yardımcı olacaktır. NPC'nin ölçüleri, bu nokta baz alınarak hesaplanır.
 
+Çoklu seçim özelliğini etkinleştirirseniz liste üzerinden birden fazla NPC'yi seçerek tek sefer her birine aynı hitbox değerlerini kaydedebilirsiniz. Bu sayede farklı zorluk derecelerine ait NPC'leri ayrı ayrı düzenlemeye uğraşmazsınız. Burada temel şart olarak karakterlerin aynı modeli kullanmasıdır. Yanlış bir karaktere aynı hitboxu atamayı önlemek için ModelID'si farklı olan karakterleri listeden seçemezsiniz.  
 
 Nasıl çalışır?
 --------------

@@ -19,6 +19,7 @@ Usage Video
 - The NPC swf is automatically detected and loaded from the resources.
 - NPC animations can be listed.
 - NPC animations can be played.
+- By selecting the multi-selection feature, you can bulk change the hitbox of NPCs with the same ModelID.
 - NPC hitbox can be displayed and edited.
 
 ## How to Use
@@ -40,6 +41,8 @@ NOTE: If you are developing a server, you will need these action names in NPC sc
 When you select a new NPC, existing hitboxes from the database are displayed. You can easily define the hitbox area by clicking on a point on the animation with the mouse and drawing a rectangle. You can also adjust the `x`, `y`, `width`, and `height` values of the hitbox at the bottom right for fine-tuning. To clear your temporary selection and return to the saved state, press the `reset` button. Don't forget to `save` when you finish your selection.
 
 I marked a point at the center of the NPC's animation. This point may sometimes help you. The dimensions of the NPC are calculated based on this point.
+
+If you enable the multi-selection feature, you can select more than one NPC from the list and save the same hitbox values for each of them at once. In this way, you do not have to try to arrange NPCs of different difficulty levels separately. The main condition here is that the characters use the same model. To avoid assigning the same hitbox to a wrong character, you cannot select characters with different ModelIDs from the list.
 
 ## How it Works
 The application consists of two parts. The main operations are done in a C# project called NpcEditor. I used Flash Player to process Living SWF files. I use Flash.ocx to play them.
