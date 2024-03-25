@@ -31,7 +31,7 @@ Eğer resource dosyalarınız var ise dosyaların daha hızlı yüklenmesi için
 Örnek resource adresleri:
 - Local: C:\Server\Resource  (kendi adresinizi yazınız)
 - TR: http://ddttr-a.akamaihd.net/
-- BR: http://ddttr-a.akamaihd.net/
+- BR: http://ddt-a.akamaihd.net/
 
 ### NPC seçimi
 NPC'ler veritabanından yüklenerek sol altta listeleniyor. Sol üstteki bölümde **ID** veya **isim** yazarak listede arama yapabilirsiniz. Daha ileride daha kapsamlı bir arama bölümü ekleyebilirim.
@@ -63,6 +63,7 @@ Geliştirme
 Ana uygulama C# ile geliştirildi. Animasyonlar için Actionscript kullanarak yardımcı bir araç tasarladım.
 
 C# projesini **Visual Studio 2019** ile geliştirebilirsiniz. Uygulama flash playera ihtiyaç duyar. Flash nesnesi güncel VS sürümlerinde sorun çıkardığı için VS 2019'dan ileri sürümleri kullanmamanız gerekebilir.
+
 NpcLoader adlı yardımcı swf projesini derlemek için **FlashDevelop**'u kullandım. Geliştirmek istiyorsanız olası hataları, logları görmek için mevcut Flash.ocx'i debugger versiyonuyla değiştirmeniz gerekir.
 
 Katkıda bulunanlar

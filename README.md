@@ -28,6 +28,8 @@ Before running the program, you should edit the SQL connection string and the re
 
 Example resource address:
 - Local: C:\Server\Resource (Replace it with your own address)
+- TR: http://ddttr-a.akamaihd.net/
+- BR: http://ddt-a.akamaihd.net/
 
 ### NPC Selection
 NPCs are loaded from the database and listed at the bottom left. You can search the list by typing **ID** or **name** in the top-left section. A more comprehensive search section may be added in the future.
@@ -55,6 +57,7 @@ These two separate projects communicate via flash calls.
 The main application was developed in C#. I designed a helper tool using ActionScript for animations.
 
 You can develop the C# project with **Visual Studio 2019**. The application requires Flash Player. Since the Flash object may cause issues in the latest versions of VS, you may need to avoid using versions beyond VS 2019.
+
 I used **FlashDevelop** to compile the helper swf project called NpcLoader. If you want to develop, you need to replace the existing Flash.ocx with the debugger version to see possible errors and logs.
 
 ## Contributors
