@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <assemblyIdentity name="NpcEditor.exe" version="1.0.0.0" type="win32" />
+  <file name="Flash.ocx" asmv2:size="19652288">
+    <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zs8Wva1x5Ur8lBF56it0OKBO+h0=</dsig:DigestValue>
+    </hash>
+    <typelib tlbid="{d27cdb6b-ae6d-11cf-96b8-444553540000}" version="1.0" helpdir="" resourceid="0" flags="HASDISKIMAGE" />
+    <comClass clsid="{d27cdb6e-ae6d-11cf-96b8-444553540000}" threadingModel="Apartment" tlbid="{d27cdb6b-ae6d-11cf-96b8-444553540000}" progid="ShockwaveFlash.ShockwaveFlash.23" description="Shockwave Flash" />
+  </file>
+</assembly>
