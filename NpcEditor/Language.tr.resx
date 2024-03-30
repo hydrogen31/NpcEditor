@@ -126,6 +126,9 @@
   <data name="buttonLoadAnim.Text" xml:space="preserve">
     <value>swf animasyonunu yükle</value>
   </data>
+  <data name="buttonLoadMap.Text" xml:space="preserve">
+    <value>Harita yükle</value>
+  </data>
   <data name="buttonReloadSwf.Text" xml:space="preserve">
     <value>swf aracını yenile</value>
   </data>
@@ -141,6 +144,9 @@
   <data name="groupBoxSelectedNpc.Text" xml:space="preserve">
     <value>Seçilen NPC</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Harita:</value>
+  </data>
   <data name="labelDevBy.Text" xml:space="preserve">
     <value>Geliştiren:</value>
   </data>
@@ -149,6 +155,12 @@
   </data>
   <data name="LoaderSwfNotFound" xml:space="preserve">
     <value>{0} dosyası bulunamadığı için program doğru çalışmayacaktır.</value>
+  </data>
+  <data name="MapNotFound" xml:space="preserve">
+    <value>Seçtiğiniz harita bulunamadı.</value>
+  </data>
+  <data name="MapNotSelected" xml:space="preserve">
+    <value>Harita seçilmemiş.</value>
   </data>
   <data name="NpcHitboxInvalidData" xml:space="preserve">
     <value>Hitbox verileri geçersiz. Veriler sadece sayı olmalıdır!</value>

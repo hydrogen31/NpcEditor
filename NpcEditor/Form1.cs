@@ -25,6 +25,7 @@ namespace NpcEditor
             DbMgr.Init();
             LoadSwf();
             ReloadNpcs();
+            LoadMapItems();
             textBoxResource.Text = ConfigurationManager.AppSettings["ResourceAddress"];
         }
 
@@ -208,6 +209,12 @@ namespace NpcEditor
             listBox1.DisplayMember = "Name";
         }
 
+        private void LoadMapItems()
+        {
+            comboBoxMap.DataSource = DbMgr.Map_List;
+            comboBoxMap.DisplayMember = "DisplayName";
+        }
+
         private void ChangeLanguage(string lang)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
@@ -373,6 +380,32 @@ namespace NpcEditor
             listBox1.SelectionMode = checkBoxMulti.Checked ? SelectionMode.MultiExtended : SelectionMode.One;
             if (needUpdate)
                 listBox1.SelectedItem = SelectedNPC;
+        }
+
+        private void buttonLoadMap_Click(object sender, EventArgs e)
+        {
+            if(comboBoxMap.SelectedItem == null)
+            {
+                MessageBox.Show(LanguageMgr.GetTranslation("MapNotSelected"));
+                return;
+            }
+
+            MapInfo map = (MapInfo)comboBoxMap.SelectedItem;
+            if (map != null)
+            {
+                string deadUrl = string.IsNullOrEmpty(map.DeadPic) ? "" : textBoxResource.Text + "/image/map/" + map.ID + "/" + map.DeadPic + ".png";
+                string foreUrl = string.IsNullOrEmpty(map.ForePic) ? "" : textBoxResource.Text + "/image/map/" + map.ID + "/" + map.ForePic + ".png";
+                
+                string posX = map.PosX.Replace(',', '-');
+                string posX1 = map.PosX1.Replace(',', '-');
+                
+                SendFlashCall("setMap", deadUrl, foreUrl, posX, posX1);
+            }
+            else
+            {
+                MessageBox.Show(LanguageMgr.GetTranslation("MapNotFound"));
+            }
+
         }
     }
 }

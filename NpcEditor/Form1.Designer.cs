@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelFlash = new System.Windows.Forms.Panel();
+            this.comboBoxMap = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonLoadMap = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,6 +63,7 @@
             this.textBoxActionMovie = new System.Windows.Forms.TextBox();
             this.textBoxModelID = new System.Windows.Forms.TextBox();
             this.panelNpc = new System.Windows.Forms.Panel();
+            this.checkBoxMulti = new System.Windows.Forms.CheckBox();
             this.groupBoxSelectedNpc = new System.Windows.Forms.GroupBox();
             this.textBoxSelectedNpcID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -71,7 +75,6 @@
             this.textBoxSearchNpcName = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.checkBoxMulti = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFlash.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlash1)).BeginInit();
@@ -107,6 +110,9 @@
             // 
             // panelFlash
             // 
+            this.panelFlash.Controls.Add(this.comboBoxMap);
+            this.panelFlash.Controls.Add(this.label7);
+            this.panelFlash.Controls.Add(this.buttonLoadMap);
             this.panelFlash.Controls.Add(this.comboBox1);
             this.panelFlash.Controls.Add(this.labelLanguage);
             this.panelFlash.Controls.Add(this.panel1);
@@ -118,6 +124,38 @@
             this.panelFlash.Name = "panelFlash";
             this.panelFlash.Size = new System.Drawing.Size(994, 643);
             this.panelFlash.TabIndex = 12;
+            // 
+            // comboBoxMap
+            // 
+            this.comboBoxMap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxMap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxMap.FormattingEnabled = true;
+            this.comboBoxMap.Location = new System.Drawing.Point(731, 610);
+            this.comboBoxMap.Name = "comboBoxMap";
+            this.comboBoxMap.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxMap.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(680, 614);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Tag = "label7.Text";
+            this.label7.Text = "Map:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // buttonLoadMap
+            // 
+            this.buttonLoadMap.Location = new System.Drawing.Point(902, 609);
+            this.buttonLoadMap.Name = "buttonLoadMap";
+            this.buttonLoadMap.Size = new System.Drawing.Size(89, 23);
+            this.buttonLoadMap.TabIndex = 6;
+            this.buttonLoadMap.Tag = "buttonLoadMap.Text";
+            this.buttonLoadMap.Text = "Load map";
+            this.buttonLoadMap.UseVisualStyleBackColor = true;
+            this.buttonLoadMap.Click += new System.EventHandler(this.buttonLoadMap_Click);
             // 
             // comboBox1
             // 
@@ -487,6 +525,18 @@
             this.panelNpc.Size = new System.Drawing.Size(195, 643);
             this.panelNpc.TabIndex = 12;
             // 
+            // checkBoxMulti
+            // 
+            this.checkBoxMulti.AutoSize = true;
+            this.checkBoxMulti.Location = new System.Drawing.Point(9, 187);
+            this.checkBoxMulti.Name = "checkBoxMulti";
+            this.checkBoxMulti.Size = new System.Drawing.Size(180, 17);
+            this.checkBoxMulti.TabIndex = 13;
+            this.checkBoxMulti.Tag = "checkBoxMulti.Text";
+            this.checkBoxMulti.Text = "Multi select (Only same ModelID)";
+            this.checkBoxMulti.UseVisualStyleBackColor = true;
+            this.checkBoxMulti.CheckedChanged += new System.EventHandler(this.checkBoxMulti_CheckedChanged);
+            // 
             // groupBoxSelectedNpc
             // 
             this.groupBoxSelectedNpc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -617,18 +667,6 @@
             this.listBox1.TabIndex = 6;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // checkBoxMulti
-            // 
-            this.checkBoxMulti.AutoSize = true;
-            this.checkBoxMulti.Location = new System.Drawing.Point(9, 187);
-            this.checkBoxMulti.Name = "checkBoxMulti";
-            this.checkBoxMulti.Size = new System.Drawing.Size(180, 17);
-            this.checkBoxMulti.TabIndex = 13;
-            this.checkBoxMulti.Tag = "checkBoxMulti.Text";
-            this.checkBoxMulti.Text = "Multi select (Only same ModelID)";
-            this.checkBoxMulti.UseVisualStyleBackColor = true;
-            this.checkBoxMulti.CheckedChanged += new System.EventHandler(this.checkBoxMulti_CheckedChanged);
-            // 
             // Form1
             // 
             this.AcceptButton = this.buttonLoadAnim;
@@ -709,6 +747,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label labelLanguage;
         private System.Windows.Forms.CheckBox checkBoxMulti;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonLoadMap;
+        private System.Windows.Forms.ComboBox comboBoxMap;
     }
 }
 

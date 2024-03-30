@@ -68,6 +68,7 @@
       <DependentUpon>Language.resx</DependentUpon>
     </Compile>
     <Compile Include="LanguageMgr.cs" />
+    <Compile Include="MapInfo.cs" />
     <Compile Include="NpcInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +82,7 @@
     <EmbeddedResource Include="Language.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Language.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

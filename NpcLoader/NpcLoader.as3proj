@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\NpcLoader.swf" />
+    <movie path="..\NpcEditor\bin\Debug\NpcLoader.swf" />
     <movie fps="30" />
     <movie width="1000" />
     <movie height="600" />

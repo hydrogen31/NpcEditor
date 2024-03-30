@@ -88,6 +88,15 @@ namespace NpcEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load map.
+        /// </summary>
+        internal static string buttonLoadMap_Text {
+            get {
+                return ResourceManager.GetString("buttonLoadMap.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to reload tool swf.
         /// </summary>
         internal static string buttonReloadSwf_Text {
@@ -133,6 +142,15 @@ namespace NpcEditor {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Map:.
+        /// </summary>
+        internal static string label7_Text {
+            get {
+                return ResourceManager.GetString("label7.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Developed by:.
         /// </summary>
         internal static string labelDevBy_Text {
@@ -156,6 +174,24 @@ namespace NpcEditor {
         internal static string LoaderSwfNotFound {
             get {
                 return ResourceManager.GetString("LoaderSwfNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The map you selected was not found..
+        /// </summary>
+        internal static string MapNotFound {
+            get {
+                return ResourceManager.GetString("MapNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You did not choose a map..
+        /// </summary>
+        internal static string MapNotSelected {
+            get {
+                return ResourceManager.GetString("MapNotSelected", resourceCulture);
             }
         }
         

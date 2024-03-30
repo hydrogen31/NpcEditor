@@ -126,6 +126,9 @@
   <data name="buttonLoadAnim.Text" xml:space="preserve">
     <value>load swf animation</value>
   </data>
+  <data name="buttonLoadMap.Text" xml:space="preserve">
+    <value>Load map</value>
+  </data>
   <data name="buttonReloadSwf.Text" xml:space="preserve">
     <value>reload tool swf</value>
   </data>
@@ -141,6 +144,9 @@
   <data name="groupBoxSelectedNpc.Text" xml:space="preserve">
     <value>Selected NPC</value>
   </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Map:</value>
+  </data>
   <data name="labelDevBy.Text" xml:space="preserve">
     <value>Developed by:</value>
   </data>
@@ -149,6 +155,12 @@
   </data>
   <data name="LoaderSwfNotFound" xml:space="preserve">
     <value>The program will not run correctly because the {0} file cannot be found.</value>
+  </data>
+  <data name="MapNotFound" xml:space="preserve">
+    <value>The map you selected was not found.</value>
+  </data>
+  <data name="MapNotSelected" xml:space="preserve">
+    <value>You did not choose a map.</value>
   </data>
   <data name="NpcHitboxInvalidData" xml:space="preserve">
     <value>Hitbox data is invalid. Data must be numbers only!</value>

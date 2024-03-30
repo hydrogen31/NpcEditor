@@ -11,10 +11,18 @@ namespace NpcEditor
         private static string connectionString => ConfigurationManager.AppSettings["conString"];
 
         public static List<NpcInfo> NPC_List = new List<NpcInfo>();
+        public static List<MapInfo> Map_List = new List<MapInfo>();
 
 
         public static void Init()
         {
+            NPC_List = GetAllNpcs();
+            Map_List = GetAllMap();
+        }
+
+        public static List<NpcInfo> GetAllNpcs()
+        {
+            List<NpcInfo> list = new List<NpcInfo>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM Npc_Info";
@@ -25,7 +33,6 @@ namespace NpcEditor
                     connection.Open();
                     using (SqlDataReader ResultDataReader = command.ExecuteReader())
                     {
-                        List<NpcInfo> list = new List<NpcInfo>();
 
                         while (ResultDataReader.Read())
                         {
@@ -70,8 +77,6 @@ namespace NpcEditor
                             };
                             list.Add(item);
                         }
-
-                        NPC_List = list;
                     }
                 }
                 catch (Exception ex)
@@ -82,6 +87,61 @@ namespace NpcEditor
                 {
                     connection.Close();
                 }
+            }
+            return list;
+        }
+
+        public static List<MapInfo> GetAllMap()
+        {
+            List<MapInfo> list = new List<MapInfo>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Game_Map";
+                SqlCommand command = new SqlCommand(query, connection);
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader ResultDataReader = command.ExecuteReader())
+                    {
+
+                        while (ResultDataReader.Read())
+                        {
+                            MapInfo item = new MapInfo
+                            {
+                                BackMusic = (ResultDataReader["BackMusic"]?.ToString() ?? ""),
+                                BackPic = (ResultDataReader["BackPic"]?.ToString() ?? ""),
+                                BackroundHeight = (int)ResultDataReader["BackroundHeight"],
+                                BackroundWidht = (int)ResultDataReader["BackroundWidht"],
+                                DeadHeight = (int)ResultDataReader["DeadHeight"],
+                                DeadPic = (ResultDataReader["DeadPic"]?.ToString() ?? ""),
+                                DeadWidth = (int)ResultDataReader["DeadWidth"],
+                                Description = (ResultDataReader["Description"]?.ToString() ?? ""),
+                                DragIndex = (int)ResultDataReader["DragIndex"],
+                                ForegroundHeight = (int)ResultDataReader["ForegroundHeight"],
+                                ForegroundWidth = (int)ResultDataReader["ForegroundWidth"],
+                                ForePic = (ResultDataReader["ForePic"]?.ToString() ?? ""),
+                                ID = (int)ResultDataReader["ID"],
+                                Name = (ResultDataReader["Name"]?.ToString() ?? ""),
+                                Pic = (ResultDataReader["Pic"]?.ToString() ?? ""),
+                                Remark = (ResultDataReader["Remark"]?.ToString() ?? ""),
+                                Weight = (int)ResultDataReader["Weight"],
+                                PosX = (ResultDataReader["PosX"]?.ToString() ?? ""),
+                                PosX1 = (ResultDataReader["PosX1"]?.ToString() ?? ""),
+                                Type = (byte)(int)ResultDataReader["Type"]
+                            };
+                            list.Add(item);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Db Init Error: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+                return list;
             }
         }
         public static bool UpdateNpcHitbox(NpcInfo npc)
