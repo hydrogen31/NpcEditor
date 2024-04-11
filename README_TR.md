@@ -1,10 +1,12 @@
 # NpcEditor
 Bombom'da NPC'lerin hitboxlarını düzenlemek oldukça karmaşık bir iştir. Bunlardan birini düzeltmek istediğinizde x, y, genişlik, uzunluk için yoğun hesaplamalar yapmak zorunda kalırsınız.
-Düzenleme işlemleri kolaylaştırmak için bu uygulamayı geliştirdim. Bu uygulama ile birlikte NPC alanlarını kusursuz şekilde ayarlayabilir, düzenlerken önizleyebilirsiniz.
+Düzenleme işlemlerini kolaylaştırmak için bu uygulamayı geliştirdim. Bu uygulama ile birlikte NPC alanlarını kusursuz şekilde ayarlayabilir, düzenlerken önizleyebilirsiniz.
 
 Uygulama, karakterin kendine özgü animasyonlarını yükleyerek, üzerinde alan seçimi yapabilmeyi sağlar ve seçtikten sonra yeni koordinatları karakterin üzerine yerleştirerek yeni hitbox alanını gösterir.
 
 Uygulamanın işlevleri hitbox düzenlemekle sınırlı değil. Karakterlerin animasyon isimlerini öğrenmek veya bu animasyonların hareketini izlemek için de bu aracı kullanabilirsiniz.
+
+Harita görünümü ile karakterlerin harita üzerindeki duruşunu görebilirsiniz. Koordinat belirlemek için istediğiniz bir noktaya taşıyabilirsiniz. 
 
 Kullanım videosu
 ----------------
@@ -20,6 +22,9 @@ Kullanım videosu
 - NPC animasyonu oynatılabilir.
 - Çoklu seçim özelliğini açarak aynı ModelID'ye sahip NPC'lerin hitboxunu toplu değiştirebilirsiniz. 
 - NPC hitboxunu görüntüleyebilir ve düzenleme yapabilirsiniz.
+- Harita yükleyerek NPC'lerin görünüşünü orada test edebilirsiniz.
+- NPC'yi harita üzerinde bir noktaya taşıyabilir, konumunu öğrenebilirsiniz.
+- Oyuncuların harita üzerindeki doğum yerleri görüntülenebilir. 
 
 
 Nasıl kullanılır?
@@ -49,6 +54,12 @@ NPC'yi yeni seçtiğinizde db'deki mevcut hitboxlar gözükür. Fare ile animasy
 NPC'nin animasyonunun merkez noktasına bir nokta işaretledim. Bu nokta size bazen yardımcı olacaktır. NPC'nin ölçüleri, bu nokta baz alınarak hesaplanır.
 
 Çoklu seçim özelliğini etkinleştirirseniz liste üzerinden birden fazla NPC'yi seçerek tek sefer her birine aynı hitbox değerlerini kaydedebilirsiniz. Bu sayede farklı zorluk derecelerine ait NPC'leri ayrı ayrı düzenlemeye uğraşmazsınız. Burada temel şart olarak karakterlerin aynı modeli kullanmasıdır. Yanlış bir karaktere aynı hitboxu atamayı önlemek için ModelID'si farklı olan karakterleri listeden seçemezsiniz.  
+
+### NPC Taşıma-Sürükleme
+CTRL + fare ile sol tıkladıktan sonra fare hareketiyle NPC'yi ekranda istediğiniz noktaya sürükleyebilirsiniz. Sol tıkı bıraktığınız zaman karakteri mevcut konumunda sabitlersiniz.
+
+### Harita seçimi
+Bu özellik opsiyoneldir. Karakterleri istediğiniz bir harita üzerinde görmek için kullanablirsiniz. Veribanınından yüklenen haritalarınız otomatik olarak listelenir. Listeden bir harita seçtikten sonra `Harita yükle` butonuna bastıktan sonra harita görselleri ve haritadaki doğum pozisyonları gösterilir.
 
 Nasıl çalışır?
 --------------

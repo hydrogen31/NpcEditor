@@ -8,6 +8,8 @@ The application allows selecting areas over the character by loading its unique 
 
 The functions of the application are not limited to hitbox editing. You can also use this tool to learn the action names of characters or watch the movement of these actions.
 
+Map view feature allows you to see how characters stand on the map. You can move it to any point you want to determine the coordinates.
+
 Usage Video
 ----------------
 [![Usage video](https://img.youtube.com/vi/gXL1wEztdQI/0.jpg)](https://www.youtube.com/watch?v=gXL1wEztdQI)
@@ -21,6 +23,9 @@ Usage Video
 - NPC animations can be played.
 - By selecting the multi-selection feature, you can bulk change the hitbox of NPCs with the same ModelID.
 - NPC hitbox can be displayed and edited.
+- By loading a map, you can see how NPC looks like there.
+- You can move the NPC to a point on the map and find out its location.
+- Players' birth positions on the map can be displayed.
 
 ## How to Use
 ### Configuration
@@ -45,6 +50,12 @@ When you select a new NPC, existing hitboxes from the database are displayed. Yo
 I marked a point at the center of the NPC's animation. This point may sometimes help you. The dimensions of the NPC are calculated based on this point.
 
 If you enable the multi-selection feature, you can select more than one NPC from the list and save the same hitbox values for each of them at once. In this way, you do not have to try to arrange NPCs of different difficulty levels separately. The main condition here is that the characters use the same model. To avoid assigning the same hitbox to a wrong character, you cannot select characters with different ModelIDs from the list.
+
+### NPC Drag-Move
+While pressing `CTRL + mouse left click`, you can drag the NPC to the desired point on the screen with the mouse movement. When you release the left click, you fix the character in its current position.
+
+### Map selection
+This feature is optional. You can use it to see the characters on a map of your choice. Your maps loaded from the database are automatically listed. After selecting a map from the list and pressing the `Load map` button, map images and birth positions on the map will be displayed.
 
 ## How it Works
 The application consists of two parts. The main operations are done in a C# project called NpcEditor. I used Flash Player to process Living SWF files. I use Flash.ocx to play them.
